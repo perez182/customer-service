@@ -1,4 +1,4 @@
-package com.nova.customer_service;
+package com.nova.customer.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
