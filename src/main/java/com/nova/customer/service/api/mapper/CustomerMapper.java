@@ -2,11 +2,14 @@ package com.nova.customer.service.api.mapper;
 
 import java.util.Optional;
 
+import org.springframework.stereotype.Component;
+
 import com.nova.customer.service.api.dto.request.CustomerCreateReq;
 import com.nova.customer.service.api.dto.request.CustomerUpdateReq;
 import com.nova.customer.service.api.dto.response.CustomerRes;
 import com.nova.customer.service.domain.Customer;
 
+@Component
 public class CustomerMapper {
 
     public Customer toEntityCreate(CustomerCreateReq req) {
