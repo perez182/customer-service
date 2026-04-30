@@ -2,9 +2,13 @@ package com.nova.customer.service.api.dto.request;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CustomerUpdateReq {
     @NotNull
     private Long id;
@@ -30,7 +34,7 @@ public class CustomerUpdateReq {
     private String phone;
 
     @Size(max = 255)
-    private String adress; 
+    private String address; 
     
     private Boolean isActive; 
 }

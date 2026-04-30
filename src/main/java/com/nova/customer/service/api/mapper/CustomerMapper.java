@@ -22,7 +22,7 @@ public class CustomerMapper {
         c.setSecondLastName(req.getSecondLastName());
         c.setEmail(req.getEmail());
         c.setPhone(req.getPhone());
-        c.setAdress(req.getAdress());
+        c.setAddress(req.getAddress());
       
         c.setIsActive(req.getIsActive() != null && req.getIsActive() ? 1 : 0);
         
@@ -40,7 +40,7 @@ public class CustomerMapper {
                 .secondLastName(c.getSecondLastName())
                 .email(c.getEmail())
                 .phone(c.getPhone())
-                .adress(c.getAdress())
+                .address(c.getAddress())
                 .createdAt(c.getCreatedAt())
                 .isActive(c.getIsActive() != null && c.getIsActive() == 1)
                 .build();
@@ -55,7 +55,7 @@ public class CustomerMapper {
         Optional.ofNullable(req.getSecondLastName()).filter(s -> !s.isBlank()).ifPresent(existing::setSecondLastName);
         Optional.ofNullable(req.getEmail()).filter(s -> !s.isBlank()).ifPresent(existing::setEmail);
         Optional.ofNullable(req.getPhone()).filter(s -> !s.isBlank()).ifPresent(existing::setPhone);
-        Optional.ofNullable(req.getAdress()).filter(s -> !s.isBlank()).ifPresent(existing::setAdress);
+        Optional.ofNullable(req.getAddress()).filter(s -> !s.isBlank()).ifPresent(existing::setAddress);
         
         Optional.ofNullable(req.getIsActive())
                 .ifPresent(active -> existing.setIsActive(active ? 1 : 0));

@@ -34,7 +34,7 @@ public class Customer {
     private String email; 
     
     private String phone;
-    private String adress; 
+    private String address; 
 
     @CreationTimestamp 
     @Column(name = "created_at", updatable = false)

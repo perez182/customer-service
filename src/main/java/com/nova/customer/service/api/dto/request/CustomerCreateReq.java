@@ -6,10 +6,13 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
+@NoArgsConstructor
 @Data
+@AllArgsConstructor
 public class CustomerCreateReq {
 
     @NotBlank(message = "firstName is required")
@@ -38,8 +41,8 @@ public class CustomerCreateReq {
     private String phone;
 
     @Size(max = 255)
-    @NotBlank(message = "Adress is required")
-    private String adress; 
+    @NotBlank(message = "address is required")
+    private String address; 
     
     private Boolean isActive; 
 }

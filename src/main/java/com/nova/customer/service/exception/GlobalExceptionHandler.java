@@ -38,7 +38,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<Map<String, List<String>>> handleReadableException(HttpMessageNotReadableException ex) {
         Map<String, List<String>> response = new HashMap<>();
-        String error="Invalid format in one or more fields (check the fields birhtdate,age,isActive)";
+        String error="Invalid format in one or more fields";
         List<String> errors = new ArrayList<>();
         errors.add(error);
         response.put("errors", errors);

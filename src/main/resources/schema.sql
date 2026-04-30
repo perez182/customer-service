@@ -8,7 +8,7 @@ CREATE TABLE customers (
     secondLastName VARCHAR(50),
     email VARCHAR(50) UNIQUE NOT NULL,        
     phone VARCHAR(20),
-    adress VARCHAR(255), 
+    address VARCHAR(255), 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     is_active TINYINT DEFAULT 1 CHECK (is_active IN (0, 1))
 );
